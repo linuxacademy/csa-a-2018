@@ -1,0 +1,19 @@
+#replace pathtofile with the path to the file on your local computer
+chmod 400 pathtofile/ec2_s3failover.pem
+ 
+#replace pathtofile with the path to the file on your local computer 
+ssh -i pathoffile/ec2_s3failover.pem ec2-user@ IPaddress
+
+sudo su
+ 
+yum update –y
+ 
+yum install httpd
+ 
+service httpd start
+ 
+chkconfig httpd on
+ 
+cd /var/www/html
+nano index.html
+<html> <h1> Welcome Linux Academy Students! Let’s test Route 53 Failover to an S3 Bucket. </h1> </html>
