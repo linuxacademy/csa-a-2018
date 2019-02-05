@@ -15,8 +15,8 @@ DESCRIBE ratings;
 
 INSERT INTO ratings ( author, rating, timerated )
    VALUES
-   ( "Fernando Medina Corey", 10, "2018-06-26 10:06:47"),
-   ( "Treva Williams", 10, "2018-06-23 10:06:27");
+   ( "Tia Williams", 10, "2018-06-26 10:06:47"),
+   ( "Adrian Cantril", 10, "2018-06-23 10:06:27");
 
 ### Inside the Read Replica
 
@@ -26,13 +26,14 @@ SELECT DATABASE();
 #### This command should fail:
 INSERT INTO ratings ( author, rating, timerated )
    VALUES
-   ( "Another Author", 10, "2018-06-26 10:06:47"),
-   ( "More Authors", 10, "2018-06-23 10:06:27");
+   ( "Craig", 10, "2018-06-26 10:06:47"),
+   ( "Mark", 10, "2018-06-23 10:06:27");
+
 
 ### Inside the (previously) Read Replica after it has been promoted to a standalone RDS instance. 
 
 INSERT INTO ratings ( author, rating, timerated )
    VALUES
-   ( "Another Author", 10, "2018-06-26 10:06:47"),
-   ( "More Authors", 10, "2018-06-23 10:06:27");
+   ( "Craig", 10, "2018-06-26 10:06:47"),
+   ( "Mark", 10, "2018-06-23 10:06:27");
 SELECT * FROM ratings LIMIT 2;
