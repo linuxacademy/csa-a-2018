@@ -74,7 +74,7 @@
         "FunctionName" : "list",
         "Handler" : "list.list",
         "Role" : { "Fn::GetAtt" : ["LambdaExecutionRole", "Arn"] },
-        "Runtime" : "nodejs6.10"
+        "Runtime" : "nodejs8.10"
       },
       "DependsOn" : ["LambdaExecutionRole"]
     },
@@ -89,7 +89,7 @@
         "FunctionName" : "get",
         "Handler" : "get.get",
         "Role" : { "Fn::GetAtt" : ["LambdaExecutionRole", "Arn"] },
-        "Runtime" : "nodejs6.10"
+        "Runtime" : "nodejs8.10"
       },
       "DependsOn" : ["LambdaExecutionRole"]
     },
